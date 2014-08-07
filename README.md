@@ -3,7 +3,7 @@ PointerPopupWindow
 
 An extended PopupWindow which could add a pointer to the anchor view.You could set your own pointer image, this widget will compute the pointer location for you automatically.
 
-![simply_use][1] ![align_mode][2]
+![screen_shot][1]
 
 simply use code:
 
@@ -32,5 +32,4 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-[1]:https://raw.githubusercontent.com/pinguo-marui/PointerPopupWindow/master/ppw-sample/screenshot/sample_simply_use.png
-[2]:https://raw.githubusercontent.com/pinguo-marui/PointerPopupWindow/master/ppw-sample/screenshot/sample_align_mode.png
+[1]:https://raw.githubusercontent.com/pinguo-marui/PointerPopupWindow/master/ppw-sample/screenshot/screen_shot.jpg
