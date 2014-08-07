@@ -3,6 +3,19 @@ PointerPopupWindow
 
 An extended PopupWindow which could add a pointer to the anchor view.You could set your own pointer image, this widget will compute the pointer location for you automatically.
 
+![simply_use][1] ![align_mode][2]
+
+simply use code:
+
+        // create window
+        PointerPopupWindow pop = new PointerPopupWindow(context, 200);//specify the window width explicitly
+        // set content view
+        pop.setContentView(content);
+        // set pointer image
+        pop.setPointerImageRes(R.drawable.point);
+        // show popup window point to the anchor view
+        pop.showAsPointer(anchor);
+
 License
 ==================
 Copyright 2014 OKry
@@ -18,3 +31,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+[1]:https://raw.githubusercontent.com/pinguo-marui/PointerPopupWindow/master/ppw-sample/screenshot/sample_simply_use.png
+[2]:https://raw.githubusercontent.com/pinguo-marui/PointerPopupWindow/master/ppw-sample/screenshot/sample_align_mode.png
