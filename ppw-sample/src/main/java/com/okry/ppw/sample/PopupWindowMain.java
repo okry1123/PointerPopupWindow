@@ -79,7 +79,7 @@ public class PopupWindowMain extends Activity implements Button.OnClickListener{
      */
     private PointerPopupWindow create() {
         //warning: you must specify the window width explicitly(do not use WRAP_CONTENT or MATCH_PARENT)
-        PointerPopupWindow p = new PointerPopupWindow(this, -2);
+        PointerPopupWindow p = new PointerPopupWindow(this, getResources().getDimensionPixelSize(R.dimen.popup_width));
         TextView textView = new TextView(this);
         textView.setGravity(Gravity.CENTER);
         textView.setText("Popup");

@@ -32,6 +32,9 @@ public class PointerPopupWindow extends PopupWindow {
 
     public PointerPopupWindow(Context context, int width, int height) {
         super(width, height);
+        if(width < 0) {
+            throw new RuntimeException("You must specify the window width explicitly(do not use WRAP_CONTENT or MATCH_PARENT)!!!");
+        }
         mContainer = new LinearLayout(context);
         mContainer.setOrientation(LinearLayout.VERTICAL);
         mAnchorImage = new ImageView(context);
@@ -84,8 +87,8 @@ public class PointerPopupWindow extends PopupWindow {
             mContainer.addView(mAnchorImage, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             mContainer.addView(mContent, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             mContent.addView(contentView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            super.setContentView(mContainer);
         }
-        super.setContentView(mContainer);
     }
 
     @Override
