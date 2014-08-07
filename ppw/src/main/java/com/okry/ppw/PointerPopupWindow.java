@@ -114,16 +114,15 @@ public class PointerPopupWindow extends PopupWindow {
         int[] loc = new int[2];
         anchor.getLocationInWindow(loc);//get anchor location
         if (mAlignMode == AlignMode.AUTO_OFFSET) {
-            // 计算anchor相对于屏幕中心的偏移量
+            // compute center offset rate
             float offCenterRate = (displayFrame.centerX() - loc[0]) / (float) displayFrameWidth;
             xoff = (int) ((anchor.getWidth() - getWidth()) / 2 + offCenterRate * getWidth() / 2);
         } else if (mAlignMode == AlignMode.AUTO_OFFSET.CENTER_FIX) {
             xoff = (anchor.getWidth() - getWidth()) / 2;
         }
-        // 计算x轴偏移量，使箭头可以对准anchor
         int left = loc[0] + xoff;
         int right = left + getWidth();
-        // 重置x轴偏移，使弹出框处于可视范围内
+        // reset x offset to display the window fully in the screen
         if (right > displayFrameWidth - mMarginScreen) {
             xoff = (displayFrameWidth - mMarginScreen - getWidth()) - loc[0];
         }
