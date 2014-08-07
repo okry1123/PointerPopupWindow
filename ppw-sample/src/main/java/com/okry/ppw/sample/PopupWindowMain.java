@@ -117,13 +117,13 @@ public class PopupWindowMain extends Activity implements Button.OnClickListener{
             // set screen padding
             PointerPopupWindow p = create();
             p.setPointerImageRes(R.drawable.ic_arrow);
-            p.setScreenPadding(20);
+            p.setMarginScreen(20);
             p.showAsPointer(v);
         } else if(v == b7) {
-            // set screen padding
+            // set margin screen
             PointerPopupWindow p = create();
             p.setPointerImageRes(R.drawable.ic_arrow);
-            p.setScreenPadding(50);
+            p.setMarginScreen(50);
             p.showAsPointer(v);
         } else if(v.getParent() == defaultAlignContainer) {
             // set align mode

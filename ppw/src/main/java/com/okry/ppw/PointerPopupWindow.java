@@ -23,7 +23,7 @@ public class PointerPopupWindow extends PopupWindow {
     private LinearLayout mContainer;
     private ImageView mAnchorImage;
     private FrameLayout mContent;
-    private int mScreenPadding;
+    private int mMarginScreen;
     private AlignMode mAlignMode = AlignMode.DEFAULT;
 
     public PointerPopupWindow(Context context, int width) {
@@ -60,12 +60,12 @@ public class PointerPopupWindow extends PopupWindow {
         this.mAlignMode = mAlignMode;
     }
 
-    public int getScreenPadding() {
-        return mScreenPadding;
+    public int getMarginScreen() {
+        return mMarginScreen;
     }
 
-    public void setScreenPadding(int mScreenPadding) {
-        this.mScreenPadding = mScreenPadding;
+    public void setMarginScreen(int marginScreen) {
+        this.mMarginScreen = marginScreen;
     }
 
     public void setPointerImageDrawable(Drawable d) {
@@ -124,11 +124,11 @@ public class PointerPopupWindow extends PopupWindow {
         int left = loc[0] + xoff;
         int right = left + getWidth();
         // 重置x轴偏移，使弹出框处于可视范围内
-        if (right > displayFrameWidth - mScreenPadding) {
-            xoff = (displayFrameWidth - mScreenPadding - getWidth()) - loc[0];
+        if (right > displayFrameWidth - mMarginScreen) {
+            xoff = (displayFrameWidth - mMarginScreen - getWidth()) - loc[0];
         }
-        if (left < displayFrame.left + mScreenPadding) {
-            xoff = displayFrame.left + mScreenPadding - loc[0];
+        if (left < displayFrame.left + mMarginScreen) {
+            xoff = displayFrame.left + mMarginScreen - loc[0];
         }
         computePointerLocation(anchor, xoff);
         super.showAsDropDown(anchor, xoff, yoff);
