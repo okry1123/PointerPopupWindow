@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.okry.ppw">
+    package="com.okry.ppw"
+    android:versionCode="2"
+    android:versionName="0.2">
 
     <application
         android:allowBackup="true"
