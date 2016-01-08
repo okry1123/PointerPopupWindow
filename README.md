@@ -42,3 +42,5 @@ Developed By
 License
 ==================
 None
+
+[1]:https://raw.githubusercontent.com/pinguo-marui/PointerPopupWindow/master/ppw-sample/screenshot/screen_shot.jpg
